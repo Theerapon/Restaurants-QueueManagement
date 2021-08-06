@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/margin_default"
+      android:layout_marginRight="@dimen/margin_default"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:background="@drawable/second_rounded"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_recycler_view_item"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_restaurants"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/food1" />
+
+
+        <TextView
+            android:id="@+id/recycler_name_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/recycler_name_customer"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/padding_default8dp"
+            android:layout_toLeftOf="@id/recycle_queue"
+            android:layout_toRightOf="@id/imageView_restaurants"
+            android:maxLines="1"
+            android:text="food name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/recycler_name_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/padding_default8dp"
+            android:layout_toLeftOf="@id/recycle_queue"
+            android:layout_toRightOf="@id/imageView_restaurants"
+            android:maxLines="1"
+            android:text="name customer" />
+
+        <TextView
+            android:id="@+id/recycler_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_name_customer"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/padding_default8dp"
+            android:layout_toLeftOf="@id/recycle_queue"
+            android:layout_toRightOf="@id/imageView_restaurants"
+            android:maxLines="1"
+            android:text="09:00 PM" />
+
+
+        <TextView
+            android:id="@+id/recycle_queue"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Q1"
+            android:textSize="36sp" />
+
+    </RelativeLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
